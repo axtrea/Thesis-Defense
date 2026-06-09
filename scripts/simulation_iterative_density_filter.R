@@ -57,24 +57,6 @@ dso$plot_projected(
 )
 
 # ------------------------------------------------------------
-# Density annotation (before filtering)
-# ------------------------------------------------------------
-add_annov2(n_ct = n_ct, genes = TRUE)
-
-density_values <- dso[["st"]][["data"]]@featureData@data[["density"]]
-df <- data.frame(density = density_values)
-
-ggplot(df, aes(x = density)) +
-  geom_histogram(bins = 200, fill = "lightblue", color = "white") +
-  geom_vline(xintercept = 1, linetype = "dashed", color = "red") +
-  theme_minimal() +
-  labs(
-    title = "Gene density distribution (before filtering)",
-    x = "Density",
-    y = "Frequency"
-  )
-
-# ------------------------------------------------------------
 # Iterative density filtering
 # ------------------------------------------------------------
 dso <- iterative_density_filter(
