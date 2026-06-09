@@ -32,7 +32,7 @@ library(CellDistinguisher)
 # Project utilities
 source("R/deconvolution/reference_free_methods.R")
 source("R/filtering/iterative_density_filter.R")
-source("R/metrics/metrics.R")
+source("R/utils/utils.R")
 source("R/plotting/plotting_methods.R")
 
 # ======================================================================
