@@ -48,12 +48,12 @@ library(TOAST)
 library(linseed)
 
 # Project utilities
-source("R/simulation/create_simulation.R")
-source("R/simulation/add_noise.R")
+source("R/simulation/simulation.R")
+source("R/noise/add_gaussian_noise.R")
 
 source("R/deconvolution/reference_free_methods.R")
 source("R/filtering/iterative_density_filter.R")
-source("R/metrics/metrics.R")
+source("R/utils/utils.R")
 source("R/plotting/plotting_methods.R")
 
 # ======================================================================
